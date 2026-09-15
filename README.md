@@ -10,6 +10,24 @@ triggered by a real Almanak `PolicyEngine`-approved decision:
 - tx: [`0x8611af240e724b3138492d9be35355f81fc5ee438c8640c30bfeaea0d8f187e0`](https://sepolia.etherscan.io/tx/0x8611af240e724b3138492d9be35355f81fc5ee438c8640c30bfeaea0d8f187e0)
 - full audit record: [`logs/run-1789501751-93927206.json`](logs/run-1789501751-93927206.json)
 
+## Live API
+
+A small read-only FastAPI backend (`server/main.py`) serves the persisted
+run records in `logs/` over HTTP — no secrets, no execution, just the
+existing proof. Run it locally:
+
+```bash
+pip install -r server/requirements.txt
+uvicorn server.main:app --reload --port 8000
+```
+
+Then open `http://localhost:8000` for a landing page with the flagship tx
+and every run, or hit `/api/runs`, `/api/runs/{run_id}`, `/api/flagship`
+directly. `render.yaml` is a ready-to-use Render Blueprint for deploying
+this. A "trigger a new real run" endpoint is a deliberate non-goal here
+until it's built with proper auth/rate-limiting in front of real spend — see
+that file's docstring.
+
 ## Architecture
 
 ```
