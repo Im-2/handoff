@@ -1,0 +1,129 @@
+{
+  "run_id": "run-1789499747-808f032f",
+  "strategy_name": "keeperhub_swap_agent",
+  "chain": "arbitrum-decide/sepolia-execute",
+  "saved_at": "2026-09-15T19:16:20.337931+00:00",
+  "final_status": "error",
+  "tx_hashes": [],
+  "explorer_urls": [],
+  "error": "KeeperHub swap execution failed: kh execute contract-call --chain 11155111 --contract 0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E --method exactInputSingle --args [[\"0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238\", \"0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14\", 500, \"0x9109423a75EA973961fF56BC4c493e4442524C97\", \"10000000\", \"0\", \"0\"]] --idempotency-key ce73a4952e0719f0a2b6c4e0e3627788be6a446090089cf9a1a0177b5423bc28 --abi-file C:\\Users\\hp\\AppData\\Local\\Temp\\tmpyt28pwc0.json --wait --timeout 5m failed (exit 1)",
+  "almanak_decision_trace": [
+    {
+      "trace_id": "3fc85d29-d26c-4f77-9101-45ef68a460d6",
+      "correlation_id": "e22af203-31f3-43fc-936b-9bfdc0e31a40",
+      "timestamp": "2026-09-15T19:16:20.337931+00:00",
+      "tool_name": "swap_tokens",
+      "args": {
+        "token_in": "USDC",
+        "token_out": "WETH",
+        "amount": "10",
+        "slippage_bps": 50,
+        "chain": "arbitrum",
+        "execution_wallet": "0x9109423a75ea973961ff56bc4c493e4442524c97",
+        "dry_run": false
+      },
+      "policy_result": null,
+      "execution_result": {
+        "status": "error",
+        "error_code": "execution_failed"
+      },
+      "error": "[execution_failed] KeeperHub swap execution failed: kh execute contract-call --chain 11155111 --contract 0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E --method exactInputSingle --args [[\"0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238\", \"0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14\", 500, \"0x9109423a75EA973961fF56BC4c493e4442524C97\", \"10000000\", \"0\", \"0\"]] --idempotency-key ce73a4952e0719f0a2b6c4e0e3627788be6a446090089cf9a1a0177b5423bc28 --abi-file C:\\Users\\hp\\AppData\\Local\\Temp\\tmpyt28pwc0.json --wait --timeout 5m failed (exit 1)",
+      "duration_ms": 16484.000000054948,
+      "state_delta": null
+    }
+  ],
+  "keeperhub_execution_steps": [
+    {
+      "step": "wrap_eth_to_weth",
+      "idempotency_key": "e974a662d7db40e5902bbe8ea7470ccd0c360132607393b0fe0b2905cc561aab",
+      "result": {
+        "executionId": "p8knamwu2nwmmm8l9gf5p",
+        "status": "completed",
+        "type": "transfer",
+        "transactionHash": "0x7b4ed4d91bb42980ef4bc290af115303cf62c86ac800a41b9dbe03b1a48db018",
+        "transactionLink": "https://sepolia.etherscan.io/tx/0x7b4ed4d91bb42980ef4bc290af115303cf62c86ac800a41b9dbe03b1a48db018",
+        "result": {
+          "chainId": 11155111,
+          "effectiveGasPrice": "1076328889",
+          "gasUsed": "60999863455186",
+          "gasUsedUnits": "56674",
+          "sponsored": true,
+          "success": true,
+          "transactionHash": "0x7b4ed4d91bb42980ef4bc290af115303cf62c86ac800a41b9dbe03b1a48db018",
+          "transactionLink": "https://sepolia.etherscan.io/tx/0x7b4ed4d91bb42980ef4bc290af115303cf62c86ac800a41b9dbe03b1a48db018"
+        },
+        "error": null,
+        "createdAt": "2026-09-15T19:15:47.789Z",
+        "completedAt": "2026-09-15T19:16:01.023Z",
+        "receipts": [
+          {
+            "hash": "0x7b4ed4d91bb42980ef4bc290af115303cf62c86ac800a41b9dbe03b1a48db018",
+            "chainId": 11155111,
+            "verified": true,
+            "receiptStatus": "success",
+            "blockNumber": 11711820,
+            "gasUsed": "56674",
+            "verifiedAt": "2026-09-15T19:16:00.945Z"
+          }
+        ]
+      }
+    },
+    {
+      "step": "approve",
+      "idempotency_key": "d420d73a11b5743661b90abeb95da0681fa2288488633a19835290b90a6bb312",
+      "result": {
+        "executionId": "gr7bdm3uiviviiq2axc1e",
+        "status": "completed",
+        "type": "contract-call",
+        "transactionHash": "0x71457935884b63c73ca49102c3a0a8f0eafc82bbe60419092de717ed63cae6ba",
+        "transactionLink": "https://sepolia.etherscan.io/tx/0x71457935884b63c73ca49102c3a0a8f0eafc82bbe60419092de717ed63cae6ba",
+        "result": {
+          "chainId": 11155111,
+          "effectiveGasPrice": "1044805646",
+          "executedCall": {
+            "args": {
+              "amount": "10000000",
+              "spender": "0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E"
+            },
+            "contractAddress": "0x1c7d4b196cb0c7b01d743fbc6116a902379c7238",
+            "functionName": "approve",
+            "functionSignature": "approve(address,uint256)",
+            "reverted": false,
+            "sponsored": true,
+            "topLevelTo": "0x5af5194b4b0909eb978e3cf1e25333852277f07d"
+          },
+          "gasUsed": "81223190920040",
+          "gasUsedUnits": "77740",
+          "sponsored": true,
+          "success": true,
+          "transactionHash": "0x71457935884b63c73ca49102c3a0a8f0eafc82bbe60419092de717ed63cae6ba",
+          "transactionLink": "https://sepolia.etherscan.io/tx/0x71457935884b63c73ca49102c3a0a8f0eafc82bbe60419092de717ed63cae6ba"
+        },
+        "error": null,
+        "createdAt": "2026-09-15T19:16:04.831Z",
+        "completedAt": "2026-09-15T19:16:17.183Z",
+        "receipts": [
+          {
+            "hash": "0x71457935884b63c73ca49102c3a0a8f0eafc82bbe60419092de717ed63cae6ba",
+            "chainId": 11155111,
+            "verified": true,
+            "receiptStatus": "success",
+            "blockNumber": 11711821,
+            "gasUsed": "77740",
+            "verifiedAt": "2026-09-15T19:16:17.122Z"
+          }
+        ]
+      }
+    },
+    {
+      "step": "swap",
+      "idempotency_key": "ce73a4952e0719f0a2b6c4e0e3627788be6a446090089cf9a1a0177b5423bc28",
+      "error": "kh execute contract-call --chain 11155111 --contract 0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E --method exactInputSingle --args [[\"0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238\", \"0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14\", 500, \"0x9109423a75EA973961fF56BC4c493e4442524C97\", \"10000000\", \"0\", \"0\"]] --idempotency-key ce73a4952e0719f0a2b6c4e0e3627788be6a446090089cf9a1a0177b5423bc28 --abi-file C:\\Users\\hp\\AppData\\Local\\Temp\\tmpyt28pwc0.json --wait --timeout 5m failed (exit 1)",
+      "stderr": "warning: your CLI version (0.3.0) is outdated; minimum required is 0.11.1. Run: kh update\nX execution lpl5dapf9nuvnojz5oyl4 failed\n"
+    }
+  ],
+  "extra": {
+    "keeperhub_wallet": "0x9109423a75ea973961ff56bc4c493e4442524c97",
+    "demo_swap_amount_weth": "0.005"
+  }
+}

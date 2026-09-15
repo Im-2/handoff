@@ -1,0 +1,89 @@
+{
+  "run_id": "run-1789501751-93927206",
+  "strategy_name": "keeperhub_swap_agent",
+  "chain": "arbitrum-decide/sepolia-execute",
+  "saved_at": "2026-09-15T19:50:24.251308+00:00",
+  "final_status": "success",
+  "tx_hashes": [
+    "0x8611af240e724b3138492d9be35355f81fc5ee438c8640c30bfeaea0d8f187e0"
+  ],
+  "explorer_urls": [
+    "https://sepolia.etherscan.io/tx/0x8611af240e724b3138492d9be35355f81fc5ee438c8640c30bfeaea0d8f187e0"
+  ],
+  "error": null,
+  "almanak_decision_trace": [
+    {
+      "trace_id": "3c574b58-90bc-405d-9a8d-0faa61f5f6bb",
+      "correlation_id": "ae69ebf6-1c2c-4ce3-b4aa-60cdea9e2923",
+      "timestamp": "2026-09-15T19:50:24.251308+00:00",
+      "tool_name": "swap_tokens",
+      "args": {
+        "token_in": "WETH",
+        "token_out": "USDC",
+        "amount": "0.005",
+        "slippage_bps": 50,
+        "chain": "arbitrum",
+        "execution_wallet": "0x9109423a75ea973961ff56bc4c493e4442524c97",
+        "dry_run": false
+      },
+      "policy_result": {
+        "allowed": true,
+        "violations": [],
+        "suggestions": []
+      },
+      "execution_result": {
+        "status": "success",
+        "data_keys": [
+          "tx_hash",
+          "amount_in",
+          "amount_out",
+          "effective_price",
+          "keeperhub_execution_id",
+          "explorer_url"
+        ]
+      },
+      "error": null,
+      "duration_ms": 69375.0,
+      "state_delta": null
+    }
+  ],
+  "keeperhub_execution_steps": [
+    {
+      "step": "approve",
+      "idempotency_key": "e56a5981a424bd64b95930c3e70d59ef2ebd2493569a0b483230566b2bfd8ac9",
+      "result": {
+        "executionId": "8g4cu9jx9c859u1mpyjlg",
+        "status": "completed",
+        "transactionHash": "0x0af542704e9b76ed95dfc644b0fdd43f5088583b982f866f0f1d7a308fe38748",
+        "transactionLink": "https://sepolia.etherscan.io/tx/0x0af542704e9b76ed95dfc644b0fdd43f5088583b982f866f0f1d7a308fe38748"
+      }
+    },
+    {
+      "step": "simulate_swap",
+      "result": {
+        "success": true,
+        "status": "simulated",
+        "from": "0x9109423a75ea973961ff56bc4c493e4442524c97",
+        "to": "0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E",
+        "value": "0",
+        "gasEstimate": "126352",
+        "simulatedReturnValue": "163483699",
+        "wouldRevert": false
+      }
+    },
+    {
+      "step": "swap",
+      "idempotency_key": "e7c6b1f95996921fba62b215d163ba9f43dc97090c74709c4336be1b94bfae3c",
+      "result": {
+        "executionId": "eljdeqkoarpo3zxjl7j96",
+        "status": "completed",
+        "transactionHash": "0x8611af240e724b3138492d9be35355f81fc5ee438c8640c30bfeaea0d8f187e0",
+        "transactionLink": "https://sepolia.etherscan.io/tx/0x8611af240e724b3138492d9be35355f81fc5ee438c8640c30bfeaea0d8f187e0"
+      }
+    }
+  ],
+  "extra": {
+    "keeperhub_wallet": "0x9109423a75ea973961ff56bc4c493e4442524c97",
+    "demo_swap_amount_weth": "0.005"
+  }
+}

@@ -1,0 +1,6 @@
+# almanak_baseline/ pulls the full Almanak SDK (see almanak_baseline/pyproject.toml).
+# These are the additional packages the adapter/ and scripts/ layer needs on
+# top of that, for talking to KeeperHub and Sepolia directly.
+mcp>=1.0
+httpx>=0.27
+web3>=6.15

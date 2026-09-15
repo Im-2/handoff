@@ -1,0 +1,39 @@
+{
+    "chain": "arbitrum",
+    "indicator": "rsi",
+    "base_token": "WETH",
+    "quote_token": "USDC",
+    "rsi_period": 14,
+    "rsi_oversold": 30,
+    "rsi_overbought": 70,
+    "bb_period": 20,
+    "bb_std_dev": 2.0,
+    "bb_timeframe": "1h",
+    "squeeze_threshold": 0.02,
+    "buy_percent_b": 0.0,
+    "sell_percent_b": 1.0,
+    "trade_size_usd": 1000,
+    "max_slippage_bps": 50,
+    "min_trade_value_usd": "10",
+    "max_gas_ratio": "0.05",
+    "holding_dust_usd": "1",
+    "token_funding": [
+        {
+            "symbol": "WETH",
+            "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+            "amount": "1",
+            "amount_type": "token"
+        },
+        {
+            "symbol": "USDC",
+            "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+            "amount": "5000",
+            "amount_type": "usd"
+        }
+    ],
+    "anvil_funding": {
+        "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE": 10,
+        "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1": 5,
+        "0xaf88d065e77c8cC2239327C5EDb3A432268e5831": 10000
+    }
+}

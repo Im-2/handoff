@@ -1,0 +1,52 @@
+{
+  "run_id": "run-1789499696-d827441a",
+  "strategy_name": "keeperhub_swap_agent",
+  "chain": "arbitrum-decide/sepolia-execute",
+  "saved_at": "2026-09-15T19:15:17.722978+00:00",
+  "final_status": "error",
+  "tx_hashes": [],
+  "explorer_urls": [],
+  "error": "Strategy still returned HOLD even after forcing an oversold signal; aborting.",
+  "almanak_decision_trace": [],
+  "keeperhub_execution_steps": [
+    {
+      "step": "wrap_eth_to_weth",
+      "idempotency_key": "fbd4d34ec532f26b3e207fb86a904a22074a696689002583dcf7ca5b53e3464f",
+      "result": {
+        "executionId": "a9fw6a56z5pf3bviswfjx",
+        "status": "completed",
+        "type": "transfer",
+        "transactionHash": "0x681d3a63fb735868b9df8c520565962b24256ccef1fc3863b4f58c82d0447a89",
+        "transactionLink": "https://sepolia.etherscan.io/tx/0x681d3a63fb735868b9df8c520565962b24256ccef1fc3863b4f58c82d0447a89",
+        "result": {
+          "chainId": 11155111,
+          "effectiveGasPrice": "1119978271",
+          "gasUsed": "63473648530654",
+          "gasUsedUnits": "56674",
+          "sponsored": true,
+          "success": true,
+          "transactionHash": "0x681d3a63fb735868b9df8c520565962b24256ccef1fc3863b4f58c82d0447a89",
+          "transactionLink": "https://sepolia.etherscan.io/tx/0x681d3a63fb735868b9df8c520565962b24256ccef1fc3863b4f58c82d0447a89"
+        },
+        "error": null,
+        "createdAt": "2026-09-15T19:14:56.285Z",
+        "completedAt": "2026-09-15T19:15:14.974Z",
+        "receipts": [
+          {
+            "hash": "0x681d3a63fb735868b9df8c520565962b24256ccef1fc3863b4f58c82d0447a89",
+            "chainId": 11155111,
+            "verified": true,
+            "receiptStatus": "success",
+            "blockNumber": 11711816,
+            "gasUsed": "56674",
+            "verifiedAt": "2026-09-15T19:15:14.879Z"
+          }
+        ]
+      }
+    }
+  ],
+  "extra": {
+    "keeperhub_wallet": "0x9109423a75ea973961ff56bc4c493e4442524c97",
+    "demo_swap_amount_weth": "0.005"
+  }
+}

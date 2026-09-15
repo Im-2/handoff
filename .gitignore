@@ -1,0 +1,15 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+!almanak_baseline/.env.example
+node_modules/
+.tools/
+logs/*.log
+almanak_baseline/almanak_state.db*
+*.key
+*.pem
+.cache/
